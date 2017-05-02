@@ -13,6 +13,6 @@ geth seems to drop transactions arbitrarily when sending many transactions in a 
 2. Run a private chain with geth, and make sure address `0x722bbc43bb665a5570640b0a56af48364eaba495` has a few ethers. Since transactions are signed in the scripts, I had to fix this address;
 3. Run `node async`. This script will send 100 transactions to geth asynchronously.
 
-After running the script, the amount of transactions in the pool will likely be less than 100. 
+After running the script, the amount of transactions in the pool will likely be less than 100. The number of transactions in the pool after running the script varied in my tests.
 
 Running `node sync` in step 3 will send the same 100 transactions with synchronous calls. In this case, I verified that all the transactions were consistently added to the pool.
